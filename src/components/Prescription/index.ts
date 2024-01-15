@@ -1,1 +1,1 @@
-export { PrescriptionWrapper as Prescription } from "./PrescriptionWrapper";
+export * from "./Prescription";

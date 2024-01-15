@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { PrescriptionsView } from "views/PrescriptionsView";
+import { PrescriptionListView } from "views/PrescriptionListView";
+import { PrescriptionView } from "views/PrescriptionView/PrescriptionView";
 import { allPrescriptionsLoader } from "loaders/allPrescriptionsLoader";
-import { Prescription } from "components/Prescription";
 import { prescriptionLoader } from "loaders/prescriptionLoader";
 
 /**
@@ -15,12 +15,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     loader: allPrescriptionsLoader,
-    element: <PrescriptionsView />,
+    element: <PrescriptionListView />,
     children: [
       {
         path: "/prescriptions/:prescriptionId",
         loader: prescriptionLoader,
-        element: <Prescription />,
+        element: <PrescriptionView />,
       },
     ],
   },
