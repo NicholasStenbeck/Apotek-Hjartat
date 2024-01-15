@@ -57,6 +57,7 @@
     color: inherit;
     padding: 0 1rem;
     min-height: 10rem;
+    text-decoration: none;
 
     & p {
       margin-left: 2rem;
