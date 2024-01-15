@@ -1,5 +1,11 @@
 # Prescriptions Demo
 
+## How to Run
+To run the project, run
+```yarn dev```.
+
+To run tests, run ```yarn test```.
+
 ## Technologies
 ### React
 This project uses React without any frameworks for simplicity. For production projects, I would recommend NextJS for its benefits in SEO, its control over where and when to render and its simple solutions for routing and data fetching.
@@ -48,9 +54,3 @@ Possible addons to functionality could be
 - A search function to filter prescriptions in the prescription list.
 - More information about the medication and instructions in the prescription detail view.
 - Links to more information about prescribers.
-
-## How to Run
-To run the project, run
-```yarn dev```.
-
-To run tests, run ```yarn test```.
