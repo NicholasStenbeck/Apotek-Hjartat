@@ -49,6 +49,7 @@ Possible addons to functionality could be
 - More information about the medication and instructions in the prescription detail view.
 - Links to more information about prescribers.
 
+## How to Run
 To run the project, run
 ```yarn dev```.
 
