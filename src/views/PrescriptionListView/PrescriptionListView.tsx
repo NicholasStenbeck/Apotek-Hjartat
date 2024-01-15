@@ -1,6 +1,6 @@
 import { PrescriptionsList } from "components/PrescriptionsList";
 import { Outlet, useLoaderData } from "react-router-dom";
-import { Prescription } from "types";
+import type { Prescription } from "types";
 import classes from "./PrescriptionListView.module.css";
 
 export const PrescriptionListView = () => {
