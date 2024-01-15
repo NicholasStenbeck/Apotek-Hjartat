@@ -13,9 +13,12 @@ React Router was chosen for its decoupling of data fetching and rendering, makin
 ### Yarn
 Yarn is used for its better speed and security compared to npm.
 
+### CSS Modules
+CSS Modules (styles.module.css) are used in this demo to solve specificity issues in a simple way with no external packages needed. The usage in the component files is also similar to that of many CSS-in-JS libraries (like Emotion or Styled Components), so refactoring should be easy if the need arises. It can also coexist with other solutions during the refactoring process.
+
 ## File Structure
 ### General
-Components live inside their own folders. The component folders include a main component file with a name corresponding to the component, an index file and several optional files. The most basic optional files are a CSS module file and a `components` folder, containing sub-components meant to be abstractions of parts of the main component. In general, the main component will handle the necessary logic and the sub-components will receive the results through props and stay as free from logic as possible.
+Components live inside their own folders. The component folders include a main component file with a name corresponding to the component, an index file and several optional files. The most basic optional files are a CSS module file and a `components` folder, containing sub-components meant to be abstractions of parts of the main component. In general, the main component will handle the necessary logic and the sub-components will receive the results through props and stay as free from logic as possible. Components should only import what is exported from the index file of other components. If the need to use another component's sub-component arises, move the sub-component to the `components` folder directly under `src`.
 
 Files should be kept small to enhance readability.
 
