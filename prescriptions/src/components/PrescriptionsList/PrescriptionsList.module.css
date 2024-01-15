@@ -1,0 +1,65 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+}
+
+.Title {
+  margin-left: 1rem;
+}
+
+.List {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+
+  width: 100%;
+  max-width: 600px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ListItem {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+
+  background-color: rgba(255, 255, 255, 0.1);
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+  }
+
+  &:hover:before {
+    opacity: 0.2;
+  }
+
+  &.OutOfStock {
+    background-color: darkred;
+  }
+
+  &.Active {
+    border-right: 0.5rem solid #ccc;
+    border-bottom: 0.5rem solid #ccc;
+  }
+
+  & a {
+    display: inline-block;
+    color: inherit;
+    padding: 0 1rem;
+    min-height: 10rem;
+
+    & p {
+      margin-left: 2rem;
+    }
+  }
+}
